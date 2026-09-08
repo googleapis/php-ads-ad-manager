@@ -1,6 +1,6 @@
 {
     "interfaces": {
-        "google.ads.admanager.v1.AudienceSegmentService": {
+        "google.ads.admanager.v1.BreakTemplateService": {
             "retry_codes": {
                 "no_retry_codes": []
             },
@@ -16,47 +16,32 @@
                 }
             },
             "methods": {
-                "BatchActivateAudienceSegments": {
+                "BatchCreateBreakTemplates": {
                     "timeout_millis": 60000,
                     "retry_codes_name": "no_retry_codes",
                     "retry_params_name": "no_retry_params"
                 },
-                "BatchApproveAudienceSegments": {
+                "BatchUpdateBreakTemplates": {
                     "timeout_millis": 60000,
                     "retry_codes_name": "no_retry_codes",
                     "retry_params_name": "no_retry_params"
                 },
-                "BatchCreateAudienceSegments": {
+                "CreateBreakTemplate": {
                     "timeout_millis": 60000,
                     "retry_codes_name": "no_retry_codes",
                     "retry_params_name": "no_retry_params"
                 },
-                "BatchDeactivateAudienceSegments": {
+                "GetBreakTemplate": {
                     "timeout_millis": 60000,
                     "retry_codes_name": "no_retry_codes",
                     "retry_params_name": "no_retry_params"
                 },
-                "BatchPopulateAudienceSegments": {
+                "ListBreakTemplates": {
                     "timeout_millis": 60000,
                     "retry_codes_name": "no_retry_codes",
                     "retry_params_name": "no_retry_params"
                 },
-                "BatchRejectAudienceSegments": {
-                    "timeout_millis": 60000,
-                    "retry_codes_name": "no_retry_codes",
-                    "retry_params_name": "no_retry_params"
-                },
-                "CreateAudienceSegment": {
-                    "timeout_millis": 60000,
-                    "retry_codes_name": "no_retry_codes",
-                    "retry_params_name": "no_retry_params"
-                },
-                "GetAudienceSegment": {
-                    "timeout_millis": 60000,
-                    "retry_codes_name": "no_retry_codes",
-                    "retry_params_name": "no_retry_params"
-                },
-                "ListAudienceSegments": {
+                "UpdateBreakTemplate": {
                     "timeout_millis": 60000,
                     "retry_codes_name": "no_retry_codes",
                     "retry_params_name": "no_retry_params"

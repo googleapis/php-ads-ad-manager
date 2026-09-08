@@ -22,10 +22,10 @@
 
 return [
     'interfaces' => [
-        'google.ads.admanager.v1.AudienceSegmentService' => [
-            'BatchActivateAudienceSegments' => [
+        'google.ads.admanager.v1.BreakTemplateService' => [
+            'BatchCreateBreakTemplates' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/{parent=networks/*}/audienceSegments:batchActivate',
+                'uriTemplate' => '/v1/{parent=networks/*}/breakTemplates:batchCreate',
                 'body' => '*',
                 'placeholders' => [
                     'parent' => [
@@ -35,9 +35,9 @@ return [
                     ],
                 ],
             ],
-            'BatchApproveAudienceSegments' => [
+            'BatchUpdateBreakTemplates' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/{parent=networks/*}/audienceSegments:batchApprove',
+                'uriTemplate' => '/v1/{parent=networks/*}/breakTemplates:batchUpdate',
                 'body' => '*',
                 'placeholders' => [
                     'parent' => [
@@ -47,10 +47,10 @@ return [
                     ],
                 ],
             ],
-            'BatchCreateAudienceSegments' => [
+            'CreateBreakTemplate' => [
                 'method' => 'post',
-                'uriTemplate' => '/v1/{parent=networks/*}/audienceSegments:batchCreate',
-                'body' => '*',
+                'uriTemplate' => '/v1/{parent=networks/*}/breakTemplates',
+                'body' => 'break_template',
                 'placeholders' => [
                     'parent' => [
                         'getters' => [
@@ -59,57 +59,9 @@ return [
                     ],
                 ],
             ],
-            'BatchDeactivateAudienceSegments' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/{parent=networks/*}/audienceSegments:batchDeactivate',
-                'body' => '*',
-                'placeholders' => [
-                    'parent' => [
-                        'getters' => [
-                            'getParent',
-                        ],
-                    ],
-                ],
-            ],
-            'BatchPopulateAudienceSegments' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/{parent=networks/*}/audienceSegments:batchPopulate',
-                'body' => '*',
-                'placeholders' => [
-                    'parent' => [
-                        'getters' => [
-                            'getParent',
-                        ],
-                    ],
-                ],
-            ],
-            'BatchRejectAudienceSegments' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/{parent=networks/*}/audienceSegments:batchReject',
-                'body' => '*',
-                'placeholders' => [
-                    'parent' => [
-                        'getters' => [
-                            'getParent',
-                        ],
-                    ],
-                ],
-            ],
-            'CreateAudienceSegment' => [
-                'method' => 'post',
-                'uriTemplate' => '/v1/{parent=networks/*}/audienceSegments',
-                'body' => 'audience_segment',
-                'placeholders' => [
-                    'parent' => [
-                        'getters' => [
-                            'getParent',
-                        ],
-                    ],
-                ],
-            ],
-            'GetAudienceSegment' => [
+            'GetBreakTemplate' => [
                 'method' => 'get',
-                'uriTemplate' => '/v1/{name=networks/*/audienceSegments/*}',
+                'uriTemplate' => '/v1/{name=networks/*/breakTemplates/*}',
                 'placeholders' => [
                     'name' => [
                         'getters' => [
@@ -118,13 +70,26 @@ return [
                     ],
                 ],
             ],
-            'ListAudienceSegments' => [
+            'ListBreakTemplates' => [
                 'method' => 'get',
-                'uriTemplate' => '/v1/{parent=networks/*}/audienceSegments',
+                'uriTemplate' => '/v1/{parent=networks/*}/breakTemplates',
                 'placeholders' => [
                     'parent' => [
                         'getters' => [
                             'getParent',
+                        ],
+                    ],
+                ],
+            ],
+            'UpdateBreakTemplate' => [
+                'method' => 'patch',
+                'uriTemplate' => '/v1/{break_template.name=networks/*/breakTemplates/*}',
+                'body' => 'break_template',
+                'placeholders' => [
+                    'break_template.name' => [
+                        'getters' => [
+                            'getBreakTemplate',
+                            'getName',
                         ],
                     ],
                 ],
